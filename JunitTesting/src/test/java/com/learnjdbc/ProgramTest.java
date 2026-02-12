@@ -19,13 +19,13 @@ public class ProgramTest {
 		assertTrue(p.isPalindrome(str));
 			}
 	@ParameterizedTest 
+ 
 	@CsvSource({"1,2,3","5,5,10","5,3,8"})
 	public void addTest(int a,int b,int expectedResult) {
 		Program p=new Program();
 		int actualres=p.add(a,b);
 		assertEquals(expectedResult,actualres );
 	}
-	
 	@ParameterizedTest 
 	@CsvFileSource(resources = "/capgemini.csv",numLinesToSkip =1)
 	public void evenoroddTest(String input, String expected) {

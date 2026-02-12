@@ -1,0 +1,43 @@
+package com.maping;
+@Entity
+public class Car {
+	@Id
+	private String brand;
+	private String model;
+	private String modelYear;
+	private double price;
+	
+	private Engine engine;
+	private int id;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	public String getModel() {
+		return model;
+	}
+	public void setModel(String model) {
+		this.model = model;
+	}
+	public String getModelYear() {
+		return modelYear;
+	}
+	public void setModelYear(String modelYear) {
+		this.modelYear = modelYear;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+}
