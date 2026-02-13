@@ -14,7 +14,7 @@ public class StudentDAO {
         this.em = em;
     }
 
-    // 1️⃣ Save Student
+    // Save Student
     public void saveStudent(Student student) {
         EntityTransaction transaction = em.getTransaction();
         transaction.begin();
@@ -22,18 +22,18 @@ public class StudentDAO {
         transaction.commit();
     }
 
-    // 2️⃣ Find Student by ID
+    // Find Student by ID
     public Student findStudentById(Long id) {
         return em.find(Student.class, id);
     }
 
-    // 3️⃣ Find All Students
+    // Find All Students
     public List<Student> findAllStudents() {
         return em.createQuery("SELECT s FROM Student s", Student.class)
                  .getResultList();
     }
 
-    // 4️⃣ Update Student
+    // Update Student
     public void updateStudent(Student student) {
         EntityTransaction transaction = em.getTransaction();
         transaction.begin();
@@ -41,7 +41,7 @@ public class StudentDAO {
         transaction.commit();
     }
 
-    // 5️⃣ Delete Student
+    // Delete Student
     public void deleteStudent(Long id) {
         EntityTransaction transaction = em.getTransaction();
         transaction.begin();
