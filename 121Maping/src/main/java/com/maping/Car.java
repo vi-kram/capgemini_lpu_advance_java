@@ -1,4 +1,8 @@
 package com.maping;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 @Entity
 public class Car {
 	@Id
@@ -8,6 +12,12 @@ public class Car {
 	private double price;
 	
 	private Engine engine;
+	public Engine getEngine() {
+		return engine;
+	}
+	public void setEngine(Engine engine) {
+		this.engine = engine;
+	}
 	private int id;
 	public int getId() {
 		return id;

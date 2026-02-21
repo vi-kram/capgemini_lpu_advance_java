@@ -46,7 +46,7 @@ public class StudentDAOTest {
         }
     }
 
-    // 1️⃣ Test Save
+    // Test Save
     @Test
     void testSaveStudent() {
         Student student = new Student("John", "john@example.com", 85);
@@ -55,7 +55,7 @@ public class StudentDAOTest {
         assertNotNull(student.getId());
     }
 
-    // 2️⃣ Test Find By ID
+    // Test Find By ID
     @Test
     void testFindStudentById() {
         Student student = new Student("Alice", "alice@example.com", 90);
@@ -67,7 +67,7 @@ public class StudentDAOTest {
         assertEquals("Alice", found.getName());
     }
 
-    // 3️⃣ Test Find All
+    // Test Find All
     @Test
     void testFindAllStudents() {
         studentDAO.saveStudent(new Student("A", "a@example.com", 70));
@@ -78,7 +78,7 @@ public class StudentDAOTest {
         assertTrue(students.size() >= 2);
     }
 
-    // 4️⃣ Test Update
+    // Test Update
     @Test
     void testUpdateStudent() {
         Student student = new Student("Tom", "tom@example.com", 60);
@@ -92,7 +92,7 @@ public class StudentDAOTest {
         assertEquals(95, updated.getMarks());
     }
 
-    // 5️⃣ Test Delete
+    // Test Delete
     @Test
     void testDeleteStudent() {
         Student student = new Student("Mike", "mike@example.com", 80);
@@ -105,7 +105,7 @@ public class StudentDAOTest {
         assertNull(deleted);
     }
 
-    // 6️⃣ Test Student Count
+    // Test Student Count
     @Test
     void testStudentCount() {
         studentDAO.saveStudent(new Student("X", "x@example.com", 50));
